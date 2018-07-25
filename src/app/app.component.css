@@ -1,0 +1,11 @@
+.case {
+  background-color: aqua;
+  padding-bottom: 3%;
+}
+
+.case:hover {
+  background-color: darkkhaki;
+  padding-bottom: 3%;
+}
+
+

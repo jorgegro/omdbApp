@@ -1,4 +1,18 @@
-<button class="btn btn-primary" routerLink="/home">Home Page</button>
-<button class="btn btn-primary" routerLink="/question/1">Question Page</button>
-<button class="btn btn-primary" routerLink="/result">Result Page</button>
-<router-outlet></router-outlet>
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <nav class="navbar navbar-light bg-light">
+        <input (keyup.enter)="search()" class="form-control mr-lg-10" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="input">
+        <button (click)="search()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </nav>
+    </div>
+  </div>
+  <div  class="row ">
+    <div class="col-lg-4" *ngFor="let result of this.results">
+      <div class="case my-3">
+        <p style="height: 20px;" class="text-center">{{result.Title}}</p>
+        <img src="{{result.Poster}}" width="300px" height="400px">
+      </div>
+    </div>
+  </div>
+</div>
